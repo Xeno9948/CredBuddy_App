@@ -1155,9 +1155,71 @@ h3 {
         border: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         background: rgba(255, 255, 255, 0.98);
+
+        /* Mobile Login Link Visibility */
+        .mobile-login-link {
+            display: inline-block !important;
+        }
     }
 
-    /* CRITICAL: Hide desktop nav */
+    /* Fix Grid: Force 1-column stack */
+    .bento-grid,
+    .pricing-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+        width: 100% !important;
+        overflow-x: hidden !important;
+    }
+
+    .bento-card,
+    .pricing-card {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix Hero Overlap and Spacing */
+    .hero {
+        padding-top: 8rem !important;
+        /* Clear fixed header */
+        min-height: auto !important;
+        /* Remove rigid height */
+    }
+
+    .hero-content {
+        padding-bottom: 2rem;
+        /* Give breathing room */
+    }
+
+    .hero-title {
+        margin-top: 1rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    /* Fix Pricing Spacing */
+    .pricing-section {
+        padding-top: 6rem !important;
+        /* More breathing room */
+        margin-top: 2rem !important;
+    }
+
+    .section-header {
+        margin-bottom: 3rem !important;
+    }
+
+    /* Mobile Menu CTA Color Fix */
+    .mobile-menu .btn-primary {
+        color: #ffffff !important;
+        background: var(--primary) !important;
+        -webkit-text-fill-color: #ffffff !important;
+        /* Override any gradients */
+    }
+
     .nav {
         display: none !important;
         visibility: hidden !important;
