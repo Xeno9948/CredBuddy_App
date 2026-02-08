@@ -1156,9 +1156,21 @@ h3 {
         border-bottom: 1px solid rgba(0, 0, 0, 0.05);
         background: rgba(255, 255, 255, 0.98);
 
-        /* Mobile Login Link Visibility */
+        /* Mobile Login Link Visibility & Styling */
         .mobile-login-link {
-            display: inline-block !important;
+            display: inline-flex !important;
+            background: var(--primary) !important;
+            color: #ffffff !important;
+            padding: 0.5rem 1rem !important;
+            border-radius: 50px !important;
+            font-size: 0.85rem !important;
+            font-weight: 600 !important;
+            margin-right: 0.75rem !important;
+            text-decoration: none !important;
+            box-shadow: 0 4px 12px rgba(6, 78, 59, 0.2);
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
         }
     }
 
@@ -1201,11 +1213,11 @@ h3 {
         gap: 1rem;
     }
 
-    /* Fix Pricing Spacing */
+    /* Fix Pricing Spacing - EXTRA SPACE */
     .pricing-section {
-        padding-top: 6rem !important;
-        /* More breathing room */
-        margin-top: 2rem !important;
+        padding-top: 10rem !important;
+        /* Huge breathing room */
+        margin-top: 4rem !important;
     }
 
     .section-header {
