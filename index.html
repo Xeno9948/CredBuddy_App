@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CredBuddy - Intelligent Risk Assessment</title>
+    <meta name="description"
+        content="South African businesses use CredBuddy to quickly understand customer risk, payment behaviour and business reliability.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- DM Serif Display for Editorial look, Plus Jakarta Sans for tech feel -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Ambient Background Gradients -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="glass-overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <img src="CredBuddy_transparrant.png" alt="CredBuddy Logo">
+            </a>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+                <div class="nav-buttons">
+                    <a href="#" class="btn btn-text">Login</a>
+                    <a href="#" class="btn btn-primary">Start Free Trial <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </nav>
+            <button class="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <button class="close-menu-btn"><i class="fa-solid fa-times"></i></button>
+        <ul class="mobile-nav-list">
+            <li><a href="#how-it-works">How It Works</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#" class="btn btn-text">Login</a></li>
+            <li><a href="#" class="btn btn-primary">Start Free Trial</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="pill-badge">
+                    <span class="dot"></span> Business Intelligence Engine
+                </div>
+                <h1 class="hero-title">Know who you're trading with <br><span class="text-gradient">before you
+                        deliver.</span></h1>
+                <p class="hero-desc">South African businesses use CredBuddy to quickly understand customer risk, payment
+                    behaviour and business reliability — so every deal starts with clarity.</p>
+                <div class="hero-buttons">
+                    <a href="#" class="btn btn-primary large">Check a Business <i
+                            class="fa-solid fa-magnifying-glass"></i></a>
+                    <a href="#" class="btn btn-glass large">View Sample Report</a>
+                </div>
+            </div>
+            <!-- Abstract "Dashboard" Representation using CSS Grid/Glass -->
+            <div class="hero-visual">
+                <div class="dashboard-preview">
+                    <!-- Glass Background Layer -->
+                    <div class="glass-layer"></div>
+
+                    <div class="dash-score">
+                        <div style="font-size:12px;color:#64748b;margin-bottom:4px;">RISK SCORE</div>
+                        <div style="font-size:32px;font-weight:700;color:var(--primary);">85/100</div>
+                    </div>
+                    <div class="dashboard-header">
+                        <div class="dash-circle" style="background:#ef4444"></div>
+                        <div class="dash-circle" style="background:#eab308"></div>
+                        <div class="dash-circle" style="background:#22c55e"></div>
+                    </div>
+                    <div class="dash-row">
+                        <div class="dash-bar" style="width:40%"></div>
+                        <span class="dash-badge badge-green">VERIFIED</span>
+                    </div>
+                    <div class="dash-row">
+                        <div class="dash-bar" style="width:70%"></div>
+                        <span class="dash-badge badge-yellow">WATCH</span>
+                    </div>
+                    <div class="dash-row">
+                        <div class="dash-bar" style="width:55%"></div>
+                        <span class="dash-badge badge-green">SAFE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Bento Grid Features -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2>Intelligence Suite</h2>
+                <p>Everything you need to predict business behavior.</p>
+            </div>
+            <div class="bento-grid">
+                <!-- Feature 1: AI-Powered Large Card -->
+                <div class="bento-card bento-large glass-card">
+                    <div class="card-content">
+                        <i class="card-icon fa-solid fa-brain"></i>
+                        <h3>AI-Powered Risk Engine</h3>
+                        <p>Our machine learning models analyze thousands of data points — from CIPC records to payment
+                            patterns — to predict business reliability before you trade.</p>
+                    </div>
+                    <div class="visual-abstract circle-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="85, 100"
+                                d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" />
+                        </svg>
+                        <div class="score-text">85</div>
+                    </div>
+                </div>
+
+                <!-- Feature 2: Smart Alerts -->
+                <div class="bento-card glass-card">
+                    <i class="card-icon fa-solid fa-bell"></i>
+                    <h3>Smart Alerts</h3>
+                    <p>Get instant notifications when a customer's risk profile changes — director exits, judgments, or
+                        late payments.</p>
+                </div>
+
+                <!-- Feature 3: Predictive Analytics -->
+                <div class="bento-card glass-card">
+                    <i class="card-icon fa-solid fa-chart-line"></i>
+                    <h3>Predictive Analytics</h3>
+                    <p>AI analyzes historical payment behavior to forecast future cash flow reliability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why CredBuddy -->
+    <section class="why-section">
+        <div class="container">
+            <div class="content-split">
+                <div class="text-side">
+                    <h2>Late payments shouldn't be a surprise.</h2>
+                    <p>Growing a business means trusting new customers — but uncertainty can slow you down. CredBuddy
+                        highlights key business signals and confidence indicators so you can better understand who
+                        you're working with before you supply.</p>
+                    <ul class="check-list">
+                        <li><i class="fa-solid fa-check"></i> No complicated financial jargon</li>
+                        <li><i class="fa-solid fa-check"></i> Clear "Go / No-Go" signals</li>
+                        <li><i class="fa-solid fa-check"></i> Real-time CIPC data integration</li>
+                    </ul>
+                </div>
+                <div class="visual-side">
+                    <!-- CSS Report Preview -->
+                    <div class="report-stack">
+                        <div class="report-bg"></div>
+                        <div class="report-card">
+                            <span class="report-badge">Verified</span>
+                            <div class="report-header-line"></div>
+                            <div class="report-line" style="width:100%"></div>
+                            <div class="report-line" style="width:80%"></div>
+                            <div class="report-line" style="width:90%"></div>
+                            <div class="status-indicator">
+                                <div class="indicator-dot"></div>
+                                <div style="font-weight:700; color:var(--primary); font-size:14px;">Stable Entity</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Transparent Pricing</h2>
+                <p>Scale your risk intelligence as you grow.</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Go Plan -->
+                <div class="pricing-card glass-card">
+                    <div class="card-header">
+                        <h3>Go</h3>
+                        <div class="price">R299<span>/mo</span></div>
+                        <p class="plan-desc">Essential checks for startups.</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> 5 Business Checks</li>
+                        <li><i class="fa-solid fa-check"></i> Basic Risk Signals</li>
+                        <li><i class="fa-solid fa-check"></i> Email Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-glass full-width">Get Started</a>
+                </div>
+
+                <!-- Pro Plan (Popular) -->
+                <div class="pricing-card glass-card popular">
+                    <div class="popular-tag">MOST POPULAR</div>
+                    <div class="card-header">
+                        <h3>Pro</h3>
+                        <div class="price">R599<span>/mo</span></div>
+                        <p class="plan-desc">Advanced insights for growing SMEs.</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> 20 Business Checks</li>
+                        <li><i class="fa-solid fa-check"></i> Advanced Risk Metrics</li>
+                        <li><i class="fa-solid fa-check"></i> Payment Trends</li>
+                        <li><i class="fa-solid fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="#" class="btn btn-primary full-width">Start Free Trial</a>
+                </div>
+
+                <!-- Premium Plan -->
+                <div class="pricing-card glass-card">
+                    <div class="card-header">
+                        <h3>Premium</h3>
+                        <div class="price">R999<span>/mo</span></div>
+                        <p class="plan-desc">Full power for high-volume teams.</p>
+                    </div>
+                    <ul class="features-list">
+                        <li><i class="fa-solid fa-check"></i> Unlimited Checks</li>
+                        <li><i class="fa-solid fa-check"></i> Full API Access</li>
+                        <li><i class="fa-solid fa-check"></i> Team Accounts</li>
+                        <li><i class="fa-solid fa-check"></i> Dedicated Manager</li>
+                    </ul>
+                    <a href="#" class="btn btn-glass full-width">Contact Sales</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <span class="footer-logo-text">credbuddy</span>
+                <p class="disclaimer">CredBuddy provides analytical insights and business intelligence tools.
+                    Information provided does not constitute financial advice.</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Security</a>
+                </div>
+                <div class="social-links">
+                    <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
