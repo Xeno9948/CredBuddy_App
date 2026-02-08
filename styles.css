@@ -187,8 +187,9 @@ h3 {
 }
 
 .logo img {
-    height: 38px;
-    /* Slightly smaller for balance */
+    height: 34px;
+    /* Default desktop size */
+    vertical-align: middle;
 }
 
 .nav-buttons {
@@ -239,8 +240,8 @@ h3 {
 
 /* Hero Section */
 .hero {
-    padding: 10rem 0 4rem;
-    /* Reduced top/bottom padding */
+    padding: 10rem 0 6rem;
+    /* Still spacious but less empty */
     position: relative;
     overflow: hidden;
 }
@@ -467,8 +468,8 @@ h3 {
 
 /* Features (Bento Grid) */
 .features {
-    padding: 5rem 0;
-    /* More compact */
+    padding: 2rem 0;
+    /* Tight spacing as requested */
 }
 
 .section-header {
@@ -687,22 +688,14 @@ h3 {
     background: rgba(255, 255, 255, 0.9);
     border-radius: 12px;
     border: 1px solid rgba(0, 0, 0, 0.05);
-    box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
     padding: 20px;
     position: relative;
     overflow: hidden;
     width: 100%;
     max-width: 500px;
-    transform-style: preserve-3d;
-    transform: rotateY(-5deg) rotateX(2deg);
-    /* Subtle 3D tilt */
-    transition: transform 0.3s ease;
-}
-
-.dashboard-preview:hover {
-    transform: rotateY(0) rotateX(0);
-    /* Flatten on hover */
+    /* Clean, flat UI card */
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
 }
 
 .dashboard-header {
@@ -786,19 +779,8 @@ h3 {
 }
 
 .report-bg {
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.4) 100%);
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    border-radius: 16px;
-    position: absolute;
-    width: 85%;
-    height: 90%;
-    top: 55%;
-    left: 45%;
-    /* Offset for layering */
-    transform: rotate(6deg);
-    z-index: 1;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    display: none;
+    /* Removed for cleaner look */
 }
 
 .report-stack {
@@ -912,6 +894,8 @@ h3 {
     justify-content: space-between;
     align-items: flex-start;
     gap: 4rem;
+    color: var(--text-main);
+    /* Ensure visibility */
 }
 
 .footer-brand {
@@ -1071,7 +1055,7 @@ h3 {
     }
 
     .logo img {
-        height: 42px;
+        height: 48px;
         /* Bigger logo on mobile */
     }
 
