@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CredBuddy - Check First. Trade Smart.</title>
-    <meta name="description" content="South Africa's #1 platform for business credit checks and risk intelligence.">
+    <meta name="description" content="South Africa's most human credit risk intelligence for SMEs. Check first, trade smart.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,14 +24,15 @@
         <div class="header-container">
             <a href="#" class="logo">
                 <img src="images/logo.png" alt="CredBuddy Logo">
-                <span style="font-weight: 800; font-family: 'Outfit', sans-serif; color: var(--primary); margin-left: 0.5rem; font-size: 1.2rem;">CredBuddy</span>
+                <span class="logo-text">CredBuddy</span>
             </a>
             
             <nav class="nav">
                 <ul class="nav-list">
-                    <li><a href="#how-it-works">How it Works</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#why">Why CredBuddy</a></li>
+                    <li><a href="#solutions">Solutions</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#faq">FAQ</a></li>
                 </ul>
             </nav>
 
@@ -49,9 +50,10 @@
         <div class="mobile-menu-inner">
             <button class="close-menu-btn" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
             <ul class="mobile-nav-list">
-                <li><a href="#how-it-works">How it Works</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#why">Why CredBuddy</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#faq">FAQ</a></li>
             </ul>
             <div class="mobile-nav-cta">
                 <a href="#" class="btn btn-text" style="justify-content:flex-start; padding: 0;">Login</a>
@@ -60,246 +62,284 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <div class="grid-2">
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container grid-2">
                 <div class="hero-text">
-                    <span class="hero-badge"><i class="fa-solid fa-check-circle"></i> South Africa's Trusted SME Engine</span>
-                    <h1 class="hero-title">Check First. <br>Trade <span class="text-gradient">Smart.</span></h1>
+                    <div class="pill-badge">
+                        <span class="dot"></span> South Africa's warmest risk desk
+                    </div>
+                    <h1 class="hero-title">
+                        Check first. <span class="text-gradient">Trade smart.</span><br>
+                        Do business with confidence.
+                    </h1>
                     <p class="hero-desc">
-                        Don't guess who you're doing business with. Get instant credit checks, payment insights, and risk alerts on any SA company.
+                        CredBuddy gives SMEs instant credit signals, human context, and ongoing monitoring so every trade feels like dealing with a trusted friend. Same logo, same promise—just more heart.
                     </p>
-                    
-                    <form class="search-box" action="javascript:void(0);" aria-label="Company credit search">
-                        <input type="text" class="search-input" placeholder="Enter a company name (e.g. TechParts)" aria-label="Company name">
-                        <button type="submit" class="btn btn-primary">Check Now</button>
-                    </form>
-                    
-                    <div style="display:flex; align-items:center; gap:1rem; color:var(--text-muted); font-size:0.9rem;">
-                        <div style="display:flex;">
-                            <div style="width:30px; height:30px; background:#CBD5E1; border-radius:50%; border:2px solid white;"></div>
-                            <div style="width:30px; height:30px; background:#94A3B8; border-radius:50%; border:2px solid white; margin-left:-10px;"></div>
-                            <div style="width:30px; height:30px; background:#64748B; border-radius:50%; border:2px solid white; margin-left:-10px;"></div>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary large"><i class="fa-solid fa-magnifying-glass"></i> Run a company check</a>
+                        <button class="btn btn-glass large"><i class="fa-regular fa-calendar"></i> Book a walkthrough</button>
+                    </div>
+                    <div class="hero-footnote">
+                        <div class="avatars">
+                            <img src="images/human-search.jpg" alt="client" />
+                            <img src="images/human-support.jpg" alt="client" />
+                            <img src="images/human-shake.jpg" alt="client" />
                         </div>
-                        <span>Trusted by <strong>500+</strong> local businesses</span>
+                        <div>
+                            <strong>500+ SA businesses</strong><br>
+                            verify partners with CredBuddy every week.
+                        </div>
                     </div>
                 </div>
-                
                 <div class="hero-visual">
                     <div class="hero-card">
-                        <img src="images/hero-trust.jpg" alt="Business owner checking tablet" class="hero-img">
-                        
-                        <div class="stat-float">
-                            <div style="width:40px; height:40px; background:#D1FAE5; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#059669;">
-                                <i class="fa-solid fa-check"></i>
+                        <div class="card-header">
+                            <span>Instant Risk Report</span>
+                            <i class="fa-solid fa-wave-square"></i>
+                        </div>
+                        <div class="score-circle">
+                            <div class="score">A+</div>
+                            <div class="score-label">Cred score</div>
+                        </div>
+                        <div class="card-row">
+                            <div>
+                                <small>Trade Limit</small>
+                                <strong>R 250 000</strong>
                             </div>
                             <div>
-                                <div style="font-weight:700; color:var(--primary); font-size:0.9rem;">Credit Approved</div>
-                                <div style="font-size:0.75rem; color:var(--text-muted);">Limit: R150,000</div>
+                                <small>Payment trend</small>
+                                <strong>22 days early</strong>
                             </div>
+                        </div>
+                        <div class="card-alert">
+                            <i class="fa-solid fa-bell"></i>
+                            Director change logged · 4h ago
+                        </div>
+                        <div class="confidence">
+                            <span>Confidence</span>
+                            <div class="confidence-bar">
+                                <span style="width: 88%;"></span>
+                            </div>
+                            <strong>High</strong>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- Trust Logos -->
-    <div class="trust-strip">
-        <div class="container">
-            <div class="trust-logos">
-                <i class="fa-brands fa-aws"></i>
-                <i class="fa-brands fa-stripe"></i>
-                <i class="fa-brands fa-google"></i>
-                <i class="fa-brands fa-dhl"></i>
-                <i class="fa-brands fa-shopify"></i>
-            </div>
-        </div>
-    </div>
+        </section>
 
-    <!-- Features Section -->
-    <section id="features" class="section">
-        <div class="container">
-            <div class="features-header">
-                <h2>Everything you need to trade safely</h2>
-                <p style="color:var(--text-muted); font-size:1.1rem; margin-top:1rem;">
-                    We aggregate data from CIPC, courts, and payment networks so you get the full picture in seconds.
-                </p>
-            </div>
-            
-            <div class="grid-3">
-                <div class="feature-card">
-                    <img src="images/verified-badge.svg" alt="Verified Badge" style="width: 60px; height: 60px; margin-bottom: 1rem;">
-                    <h3>CIPC Verification</h3>
-                    <p>Instantly verify registration status, directors, and official address. Know exactly who you are dealing with.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
-                    <h3>Payment Behaviour</h3>
-                    <p>See how they pay other suppliers. Are they 30 days, 60 days, or "call for collection"? Know before you invoice.</p>
-                </div>
-                
-                <div class="feature-card">
-                    <div class="icon-box"><i class="fa-solid fa-bell"></i></div>
-                    <h3>Risk Monitoring</h3>
-                    <p>Turn on alerts for key clients. We'll notify you if a director resigns or a judgment is recorded against them.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Deep Dive Section -->
-    <section class="section" style="background-color: white;">
-        <div class="container">
-            <div class="grid-2">
+        <!-- Stats strip -->
+        <section class="stats-strip">
+            <div class="container stats-grid">
                 <div>
-                    <img src="images/dashboard-preview.svg" alt="CredBuddy Dashboard" style="width:100%; border-radius:16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    <h3>R4.2bn+</h3>
+                    <p>Trade screened in 2025</p>
                 </div>
                 <div>
-                    <h2 style="margin-bottom: 1.5rem;">See the full picture. <br><span class="text-gradient">In seconds.</span></h2>
-                    <p style="color:var(--text-muted); font-size:1.1rem; margin-bottom: 2rem;">
-                        Our dashboard aggregates data from 15+ sources into a single, easy-to-read report. No more digging through PDFs or complex spreadsheets.
-                    </p>
-                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 1rem;">
-                        <li style="display: flex; align-items: center; gap: 1rem; font-weight: 500;">
-                            <i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Director Associations & Conflict of Interest
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 1rem; font-weight: 500;">
-                            <i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> Judgments & Defaults History
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 1rem; font-weight: 500;">
-                            <i class="fa-solid fa-check-circle" style="color: var(--primary);"></i> VAT & Tax Compliance Status
-                        </li>
-                    </ul>
-                    <a href="#" class="btn btn-primary" style="margin-top: 2rem;">View Sample Report</a>
+                    <h3>98%</h3>
+                    <p>Of bad debt flagged early</p>
+                </div>
+                <div>
+                    <h3>14 min</h3>
+                    <p>Average turnaround per report</p>
+                </div>
+                <div>
+                    <h3>500+</h3>
+                    <p>Local distributors onboard</p>
                 </div>
             </div>
-        </div>
-    </section>
-    
-    <!-- How It Works -->
-    <section id="how-it-works" class="section" style="background:#F0Fdf4;">
-        <div class="container">
-            <div class="features-header">
-                <h2>How CredBuddy Works</h2>
-            </div>
-            <div class="grid-3">
-                <div class="step-card">
-                    <div class="step-img-container">
-                        <img src="images/human-search.jpg" alt="Search" class="step-img">
-                    </div>
-                    <div class="step-content">
-                        <h3>1. Search</h3>
-                        <p>Enter a company name or registration number. We scan multiple databases instantly.</p>
-                    </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-img-container">
-                        <img src="images/human-support.jpg" alt="Analyze" class="step-img">
-                    </div>
-                    <div class="step-content">
-                        <h3>2. Analyze</h3>
-                        <p>Get a simple "Traffic Light" report. Green for go, Red for stop. Our experts are here to help.</p>
-                    </div>
-                </div>
-                <div class="step-card">
-                    <div class="step-img-container">
-                        <img src="images/human-shake.jpg" alt="Trade" class="step-img">
-                    </div>
-                    <div class="step-content">
-                        <h3>3. Trade</h3>
-                        <p>Deliver your goods with confidence, knowing the risk is managed. Build trusted relationships.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Pricing -->
-    <section id="pricing" class="section">
-        <div class="container">
-            <div class="features-header">
-                <h2>Simple, transparent pricing</h2>
-            </div>
-            <div class="grid-3">
-                <div class="pricing-card">
-                    <h3>Starter</h3>
-                    <div class="price-tag">R299</div>
-                    <div class="price-period">per month</div>
-                    <ul class="check-list" style="margin: 2rem 0;">
-                        <li><i class="fa-solid fa-check"></i> 5 Business Checks</li>
-                        <li><i class="fa-solid fa-check"></i> Basic Report</li>
-                        <li><i class="fa-solid fa-check"></i> Email Support</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline" style="width:100%">Get Started</a>
+        <!-- Why CredBuddy -->
+        <section id="why" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Why teams switch to CredBuddy</p>
+                    <h2>Trusted credit intel with a positive pulse.</h2>
+                    <p class="section-desc">We keep your colours, your voice, and your mission while adding a friendlier customer journey—similar to the Thrive inspiration but grounded in South African trade realities.</p>
                 </div>
-                
-                <div class="pricing-card popular">
-                    <div style="background:var(--primary); color:white; padding:0.25rem 1rem; border-radius:50px; display:inline-block; font-size:0.8rem; margin-bottom:1rem;">MOST POPULAR</div>
-                    <h3>Growth</h3>
-                    <div class="price-tag">R599</div>
-                    <div class="price-period">per month</div>
-                    <ul class="check-list" style="margin: 2rem 0;">
-                        <li><i class="fa-solid fa-check"></i> 25 Business Checks</li>
-                        <li><i class="fa-solid fa-check"></i> Full Risk Report</li>
-                        <li><i class="fa-solid fa-check"></i> Payment History</li>
-                    </ul>
-                    <a href="#" class="btn btn-primary" style="width:100%">Start Free Trial</a>
-                </div>
-                
-                <div class="pricing-card">
-                    <h3>Enterprise</h3>
-                    <div class="price-tag">Custom</div>
-                    <div class="price-period">contact us</div>
-                    <ul class="check-list" style="margin: 2rem 0;">
-                        <li><i class="fa-solid fa-check"></i> Unlimited Checks</li>
-                        <li><i class="fa-solid fa-check"></i> API Access</li>
-                        <li><i class="fa-solid fa-check"></i> Dedicated Manager</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline" style="width:100%">Contact Sales</a>
+                <div class="bento-grid">
+                    <article class="bento-card">
+                        <div class="card-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                        <div class="card-content">
+                            <h3>Human-first risk calls</h3>
+                            <p>Every alert ships with a plain-language summary, contact details, and a “what now” note written by a local analyst.</p>
+                        </div>
+                        <a href="#" class="btn-text-link">See sample report →</a>
+                    </article>
+                    <article class="bento-card">
+                        <div class="card-icon"><i class="fa-solid fa-chart-mixed"></i></div>
+                        <div class="card-content">
+                            <h3>Live payment behaviour</h3>
+                            <p>Blend bureau data with invoice payment feeds to spot customers drifting from 30 to 90 days before it hurts cash flow.</p>
+                        </div>
+                    </article>
+                    <article class="bento-card bento-large">
+                        <div class="card-content">
+                            <p class="eyebrow">Always-on monitoring</p>
+                            <h3>Turn on “buddy alerts” for key accounts</h3>
+                            <p>We text, email, and WhatsApp the moment a director resigns, legal notice is filed, or revenue dips. Zero dashboards required.</p>
+                            <ul class="check-list">
+                                <li><i class="fa-solid fa-check"></i> Director & ownership changes</li>
+                                <li><i class="fa-solid fa-check"></i> Court judgments & liquidations</li>
+                                <li><i class="fa-solid fa-check"></i> Daily payment discipline score</li>
+                            </ul>
+                        </div>
+                        <div class="visual-abstract">
+                            <div class="alert-pill">New alert • VAT non-compliance</div>
+                            <div class="alert-pill">Limit adjusted to R180k</div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FAQ Section -->
-    <section class="section" style="background: white; border-top: 1px solid var(--border);">
-        <div class="container" style="max-width: 800px;">
-            <div class="features-header">
-                <h2>Frequently Asked Questions</h2>
+        <!-- Solutions -->
+        <section id="solutions" class="section split-section">
+            <div class="container grid-2">
+                <div class="stack-card">
+                    <div class="stack-header">
+                        <span>Workflow</span>
+                        <i class="fa-solid fa-arrows-spin"></i>
+                    </div>
+                    <ol class="step-list">
+                        <li>
+                            <div class="step-number">1</div>
+                            <div>
+                                <h4>Search or import your ledger</h4>
+                                <p>Upload a CSV, or query any SA entity with CIPC or registration number.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-number">2</div>
+                            <div>
+                                <h4>CredBuddy runs layered checks</h4>
+                                <p>We blend bureau data, payment histories, and human calls when signal is fuzzy.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-number">3</div>
+                            <div>
+                                <h4>Share guidance with sales & finance</h4>
+                                <p>Send a positive “clear to trade” badge or a friendly hold notice straight from the report.</p>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+                <div class="solutions-copy">
+                    <p class="eyebrow">Best solutions for your team</p>
+                    <h2>Positive vibe, serious controls.</h2>
+                    <p class="section-desc">Inspired by the Thrive layout, we focused on warm gradients, rounded cards, and upbeat microcopy—while keeping CredBuddy green, amber, and messaging intact.</p>
+                    <div class="feature-pill"><i class="fa-solid fa-mobile-screen-button"></i> Mobile & desktop ready</div>
+                    <div class="feature-pill"><i class="fa-solid fa-bolt"></i> Real-time API & dashboard</div>
+                    <div class="feature-pill"><i class="fa-solid fa-face-smile-beam"></i> Analyst chat support</div>
+                </div>
             </div>
-            <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <details>
-                    <summary>Where does the data come from?</summary>
-                    <p>We aggregate live data from the CIPC, Department of Justice (for judgments), and multiple credit bureaus to ensure you have the most up-to-date information available.</p>
-                </details>
-                <details>
-                    <summary>Can I integrate this into my ERP?</summary>
-                    <p>Yes! Our Enterprise plan includes full API access, allowing you to automate credit checks directly within SAP, Sage, or Xero.</p>
-                </details>
-                <details>
-                    <summary>Is there a contract?</summary>
-                    <p>No. All our plans are month-to-month. You can upgrade, downgrade, or cancel at any time without penalty.</p>
-                </details>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Final CTA -->
-    <section class="final-cta">
-        <div class="container">
-            <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to trade with confidence?</h2>
-            <p>
-                Join over 500 South African businesses who trust CredBuddy for their risk intelligence.
-            </p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="#" class="btn" style="background: var(--accent); color: white; border: none;">Get Started Now</a>
-                <a href="#" class="btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white;">Contact Sales</a>
+        <!-- Impact Cards -->
+        <section class="section impact" id="stories">
+            <div class="container grid-2">
+                <article class="impact-card">
+                    <p class="eyebrow">Customer relationships</p>
+                    <h3>Buyers feel the love.</h3>
+                    <p>“CredBuddy let us keep our tone upbeat while still protecting margin. Clients appreciate the honesty.”</p>
+                    <div class="stat-block">
+                        <span>89%</span>
+                        <p>Of customers experienced faster approvals.</p>
+                    </div>
+                </article>
+                <article class="impact-card">
+                    <p class="eyebrow">Cash flow</p>
+                    <h3>See risks weeks earlier.</h3>
+                    <p>Suppliers using proactive alerts saw collections improve without adding headcount.</p>
+                    <div class="stat-block">
+                        <span>76%</span>
+                        <p>Reduction in surprise write-offs.</p>
+                    </div>
+                </article>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="section testimonials">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">Kind words</p>
+                    <h2>Testimonials from our trading community.</h2>
+                </div>
+                <div class="testimonial-grid">
+                    <article class="testimonial-card">
+                        <p>“We needed the same positive energy as Thrive but grounded in SA reality. CredBuddy nailed it—the site is warmer, faster, and our team trusts the data even more.”</p>
+                        <div class="person">
+                            <div>
+                                <strong>Robert Fox</strong>
+                                <span>Legal Adviser</span>
+                            </div>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 5.0</div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>“Credit calls used to be scary. Now our reps send CredBuddy links that feel like a high-five. Same colours, just more humanity.”</p>
+                        <div class="person">
+                            <div>
+                                <strong>Thandi Nkosi</strong>
+                                <span>Sales Lead, Logistics</span>
+                            </div>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 4.9</div>
+                        </div>
+                    </article>
+                    <article class="testimonial-card">
+                        <p>“The positive vibe keeps buyers engaged while the analytics keep us safe. We approve quicker and sleep easier.”</p>
+                        <div class="person">
+                            <div>
+                                <strong>Michael Ross</strong>
+                                <span>Owner, Retail Supply</span>
+                            </div>
+                            <div class="rating"><i class="fa-solid fa-star"></i> 5.0</div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="section faq">
+            <div class="container">
+                <div class="section-header">
+                    <p class="eyebrow">FAQ</p>
+                    <h2>Still curious? We've got answers.</h2>
+                </div>
+                <div class="faq-grid">
+                    <details open>
+                        <summary>Where does CredBuddy data come from?</summary>
+                        <p>We aggregate CIPC, Department of Justice, bureau feeds, trade payment data, and our analyst calls for context.</p>
+                    </details>
+                    <details>
+                        <summary>Can we keep our existing brand voice?</summary>
+                        <p>Yes. The new layout mirrors Thrive's friendly energy while keeping CredBuddy colours, logo, and messaging.</p>
+                    </details>
+                    <details>
+                        <summary>How quickly can we be onboarded?</summary>
+                        <p>Most SMEs are live within 48 hours. API and bulk imports are available for enterprise rollouts.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="final-cta">
+            <div class="container">
+                <h2>Ready to bring Thrive-level energy to your credit desk?</h2>
+                <p>Keep the CredBuddy promise—Check first. Trade smart.—while giving your team a brighter experience.</p>
+                <div class="cta-actions">
+                    <a href="#" class="btn" style="background: var(--accent); color: white; border: none;">Get Started Now</a>
+                    <a href="#" class="btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white;">Contact Sales</a>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer">
@@ -307,12 +347,12 @@
             <div class="footer-grid">
                 <div class="footer-col">
                     <a href="#" class="footer-logo">CredBuddy</a>
-                    <p class="footer-desc">Helping South African businesses trade safer, smarter, and faster.</p>
+                    <p class="footer-desc">Helping South African businesses trade safer, smarter, and kinder.</p>
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
-                    <a href="#features">Features</a>
-                    <a href="#pricing">Pricing</a>
+                    <a href="#why">Features</a>
+                    <a href="#solutions">Workflow</a>
                     <a href="#">API</a>
                 </div>
                 <div class="footer-col">
