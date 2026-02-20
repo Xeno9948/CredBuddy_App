@@ -475,24 +475,29 @@
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-content">
+    <!-- Header (Pill Shape) -->
+    <header class="header">
+        <div class="header-container">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="CredBuddy Logo" style="height: 60px; margin-right: 0.5rem;">
-                CredBuddy
+                <img src="images/logo.png" alt="CredBuddy Logo">
             </a>
-            <div class="nav-links">
-                <a href="#how-it-works">How it Works</a>
-                <a href="#features">Features</a>
-                <a href="#pricing">Pricing</a>
-            </div>
-            <div style="display:flex; gap:1rem; align-items:center;">
-                <a href="#" style="font-weight:600; color:var(--primary);">Login</a>
+            
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#how-it-works">How it Works</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-buttons">
+                <a href="#" class="btn btn-text">Login</a>
                 <a href="#" class="btn btn-primary">Start Free Trial</a>
             </div>
+            
+            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -556,36 +561,32 @@
     </div>
 
     <!-- Features Section -->
-    <section id="features" class="section video-section">
-        <div class="video-bg-overlay"></div>
-        <video autoplay muted loop playsinline class="video-bg">
-            <source src="https://cdn.pixabay.com/video/2019/04/23/23011-332483109_large.mp4" type="video/mp4">
-        </video>
-        <div class="container relative-content">
-            <div class="features-header glass-panel" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
-                <h2 style="color: white;">Everything you need to trade safely</h2>
-                <p style="color: rgba(255,255,255,0.9); font-size:1.1rem; margin-top:1rem;">
+    <section id="features" class="section">
+        <div class="container">
+            <div class="features-header" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+                <h2>Everything you need to trade safely</h2>
+                <p style="color:var(--text-muted); font-size:1.1rem; margin-top:1rem;">
                     We aggregate data from CIPC, courts, and payment networks so you get the full picture in seconds.
                 </p>
             </div>
             
             <div class="grid-3">
                 <!-- Feature 1 -->
-                <div class="feature-card glass-card">
+                <div class="feature-card">
                     <img src="images/verified-badge.svg" alt="Verified Badge" style="width: 60px; height: 60px; margin-bottom: 1rem;">
                     <h3>CIPC Verification</h3>
                     <p>Instantly verify registration status, directors, and official address. Know exactly who you are dealing with.</p>
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="feature-card glass-card">
+                <div class="feature-card">
                     <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>Payment Behaviour</h3>
                     <p>See how they pay other suppliers. Are they 30 days, 60 days, or "call for collection"? Know before you invoice.</p>
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="feature-card glass-card">
+                <div class="feature-card">
                     <div class="icon-box"><i class="fa-solid fa-bell"></i></div>
                     <h3>Risk Monitoring</h3>
                     <p>Turn on alerts for key clients. We'll notify you if a director resigns or a judgment is recorded against them.</p>
