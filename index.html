@@ -14,453 +14,8 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <style>
-        :root {
-            /* Brand Palette */
-            --primary: #1B4332;       /* Deep Forest Green */
-            --primary-dark: #0F291E;
-            --primary-light: #2D6A4F;
-            --accent: #F59E0B;        /* Gold/Amber */
-            --accent-hover: #D97706;
-            --bg-body: #F8FAFC;       /* Light Grey-Blue tint */
-            --bg-card: #FFFFFF;
-            --text-main: #1E293B;     /* Slate 800 */
-            --text-muted: #64748B;    /* Slate 500 */
-            --border: #E2E8F0;
-            
-            /* Spacing */
-            --container-width: 1200px;
-            --header-height: 80px;
-        }
-
-        /* Reset & Base */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: var(--bg-body);
-            color: var(--text-main);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Outfit', sans-serif;
-            color: var(--primary);
-            line-height: 1.2;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.2s; }
-        ul { list-style: none; }
-        
-        /* Layout Utilities */
-        .container {
-            max-width: var(--container-width);
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 6rem 0;
-        }
-        
-        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
-        
-        /* Buttons */
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 0.6rem 1.25rem;
-            border-radius: 50px; /* Rounder/Pill shape */
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: transform 0.2s, box-shadow 0.2s;
-        }
-
-        .btn-primary {
-            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); /* Force Amber/Gold */
-            color: white;
-            border: none;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
-        }
-
-        .btn-primary:hover {
-            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
-            transform: translateY(-1px);
-            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
-        }
-        
-        .btn-outline {
-            background: white;
-            border: 1px solid var(--border);
-            color: var(--text-main);
-        }
-        
-        .btn-outline:hover {
-            border-color: var(--primary);
-            color: var(--primary);
-        }
-
-        .btn-text {
-            background: transparent;
-            color: var(--primary);
-            font-weight: 600;
-        }
-        
-        .btn-text:hover { color: var(--accent); }
-
-        /* Header - Pill Shape Floating */
-        .header {
-            padding: 0.3rem 0;
-            position: fixed;
-            top: 1rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 9999;
-            width: auto;
-            max-width: 900px;
-        }
-
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 2rem;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(0, 0, 0, 0.06);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-            border-radius: 100px;
-            padding: 0.4rem 0.75rem 0.4rem 1.5rem;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 48px; /* Bigger logo */
-            width: auto;
-        }
-
-        .nav-list {
-            display: flex;
-            gap: 2rem;
-        }
-        
-        .nav-list a {
-            font-weight: 500;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        
-        .nav-list a:hover { color: var(--primary); }
-
-        .nav-buttons {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        /* Specific Header Button Style */
-        .header-container .btn-primary {
-            background: var(--primary);
-            padding: 0.5rem 1.2rem;
-            font-size: 0.85rem;
-        }
-        
-        .header-container .btn-primary:hover {
-            background: var(--primary-light);
-        }
-
-        .mobile-menu-btn { display: none; }
-
-        /* Hero Section */
-        .hero {
-            padding: 12rem 0 6rem;
-            background: linear-gradient(135deg, #F0Fdf4 0%, #FFF 100%);
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(80px);
-            z-index: 0;
-        }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(27, 67, 50, 0.08);
-            color: var(--primary);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.875rem;
-            font-weight: 600;
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-title {
-            font-size: 3.5rem;
-            font-weight: 800;
-            margin-bottom: 1.5rem;
-            letter-spacing: -0.02em;
-        }
-        
-        .text-gradient {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        
-        .hero-desc {
-            font-size: 1.25rem;
-            color: var(--text-muted);
-            margin-bottom: 2.5rem;
-            max-width: 500px;
-        }
-
-        .search-box {
-            background: white;
-            padding: 0.5rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.08);
-            display: flex;
-            gap: 0.5rem;
-            max-width: 480px;
-            margin-bottom: 2rem;
-            border: 1px solid var(--border);
-        }
-
-        .search-input {
-            flex: 1;
-            border: none;
-            padding: 0 1rem;
-            font-size: 1rem;
-            outline: none;
-            font-family: 'Inter', sans-serif;
-        }
-        
-        /* Hero Visual */
-        .hero-visual { position: relative; z-index: 1; }
-        
-        .hero-card {
-            background: white;
-            border-radius: 20px;
-            padding: 1rem;
-            box-shadow: 0 20px 60px -10px rgba(0,0,0,0.12);
-            border: 1px solid rgba(0,0,0,0.05);
-            transition: transform 0.3s ease;
-        }
-        
-        .hero-card:hover { transform: translateY(-5px); }
-        
-        .hero-img {
-            width: 100%;
-            border-radius: 16px;
-            display: block;
-        }
-        
-        .stat-float {
-            position: absolute;
-            background: white;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            bottom: 40px;
-            left: -30px;
-            border: 1px solid var(--border);
-            animation: float 4s ease-in-out infinite;
-        }
-        
-        @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
-
-        /* Trusted By */
-        .trust-strip {
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--border);
-            background: white;
-        }
-        
-        .trust-logos {
-            display: flex;
-            justify-content: center;
-            gap: 4rem;
-            opacity: 0.5;
-            filter: grayscale(100%);
-        }
-        
-        .trust-logos i { font-size: 1.5rem; }
-
-        /* Features Section */
-        .features-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-        }
-        
-        .feature-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-        
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.05);
-            border-color: var(--primary-light);
-        }
-        
-        .icon-box {
-            width: 50px;
-            height: 50px;
-            background: rgba(27, 67, 50, 0.05);
-            color: var(--primary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .feature-card h3 { font-size: 1.25rem; margin-bottom: 0.75rem; }
-        .feature-card p { color: var(--text-muted); font-size: 1rem; }
-
-        /* How It Works Steps */
-        .step-card {
-            background: white;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-            text-align: center;
-        }
-        
-        .step-img-container {
-            width: 100%;
-            height: 220px;
-            overflow: hidden;
-        }
-
-        .step-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .step-card:hover .step-img {
-            transform: scale(1.05);
-        }
-        
-        .step-content { padding: 2rem; }
-
-        /* Pricing */
-        .pricing-card {
-            background: white;
-            padding: 3rem 2rem;
-            border-radius: 16px;
-            border: 1px solid var(--border);
-            text-align: center;
-            position: relative;
-        }
-        
-        .pricing-card.popular {
-            border: 2px solid var(--primary);
-            box-shadow: 0 20px 40px rgba(27, 67, 50, 0.1);
-        }
-        
-        .price-tag { font-size: 3rem; font-weight: 800; color: var(--primary); margin: 1rem 0; }
-        .price-period { font-size: 1rem; color: var(--text-muted); font-weight: 500; }
-        
-        .check-list li {
-            margin-bottom: 0.75rem;
-            color: var(--text-main);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-        }
-        
-        .check-list i { color: var(--primary); }
-
-        /* Footer */
-        .footer {
-            background: var(--primary-dark);
-            color: white;
-            padding: 4rem 0 2rem;
-            margin-top: -1px; /* Remove gap */
-        }
-        
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 4rem;
-            margin-bottom: 4rem;
-        }
-        
-        .footer-logo { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; display: block; }
-        .footer-desc { color: rgba(255,255,255,0.7); max-width: 300px; }
-        
-        .footer-col h4 { color: white; margin-bottom: 1.5rem; font-size: 1.1rem; }
-        .footer-col a { display: block; color: rgba(255,255,255,0.7); margin-bottom: 0.75rem; }
-        .footer-col a:hover { color: var(--accent); }
-        
-        .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 2rem;
-            text-align: center;
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-        }
-
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .header {
-                width: 90%;
-                top: 1rem;
-            }
-            
-            .header-container {
-                padding: 0.5rem 1rem;
-            }
-
-            .nav { display: none; }
-            .mobile-menu-btn { display: block; border: none; background: none; font-size: 1.5rem; color: var(--primary); }
-
-            .grid-2, .grid-3 { grid-template-columns: 1fr; gap: 2rem; }
-            .hero-title { font-size: 2.5rem; }
-            .hero { padding-top: 8rem; text-align: center; }
-            .hero-desc { margin: 0 auto 2rem; }
-            .search-box { margin: 0 auto 2rem; }
-            .hero-visual { margin-top: 2rem; }
-            .stat-float { left: 50%; transform: translateX(-50%); bottom: -20px; width: max-content; }
-            
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-        }
-    </style>
+    <!-- Site Styles -->
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
@@ -468,7 +23,6 @@
     <header class="header">
         <div class="header-container">
             <a href="#" class="logo">
-                <!-- Using a smaller height for the logo in the header -->
                 <img src="images/logo.png" alt="CredBuddy Logo">
                 <span style="font-weight: 800; font-family: 'Outfit', sans-serif; color: var(--primary); margin-left: 0.5rem; font-size: 1.2rem;">CredBuddy</span>
             </a>
@@ -486,9 +40,25 @@
                 <a href="#" class="btn btn-primary">Start Free Trial</a>
             </div>
             
-            <button class="mobile-menu-btn"><i class="fa-solid fa-bars"></i></button>
+            <button class="mobile-menu-btn" aria-label="Open menu"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-inner">
+            <button class="close-menu-btn" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+            <ul class="mobile-nav-list">
+                <li><a href="#how-it-works">How it Works</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+            </ul>
+            <div class="mobile-nav-cta">
+                <a href="#" class="btn btn-text" style="justify-content:flex-start; padding: 0;">Login</a>
+                <a href="#" class="btn btn-primary" style="width:100%; justify-content:center;">Start Free Trial</a>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -501,9 +71,8 @@
                         Don't guess who you're doing business with. Get instant credit checks, payment insights, and risk alerts on any SA company.
                     </p>
                     
-                    <!-- Functional Looking Search -->
-                    <form class="search-box">
-                        <input type="text" class="search-input" placeholder="Enter a company name (e.g. TechParts)">
+                    <form class="search-box" action="javascript:void(0);" aria-label="Company credit search">
+                        <input type="text" class="search-input" placeholder="Enter a company name (e.g. TechParts)" aria-label="Company name">
                         <button type="submit" class="btn btn-primary">Check Now</button>
                     </form>
                     
@@ -519,10 +88,8 @@
                 
                 <div class="hero-visual">
                     <div class="hero-card">
-                        <!-- Using the generated image -->
                         <img src="images/hero-trust.jpg" alt="Business owner checking tablet" class="hero-img">
                         
-                        <!-- Floating Trust Badge -->
                         <div class="stat-float">
                             <div style="width:40px; height:40px; background:#D1FAE5; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#059669;">
                                 <i class="fa-solid fa-check"></i>
@@ -562,21 +129,18 @@
             </div>
             
             <div class="grid-3">
-                <!-- Feature 1 -->
                 <div class="feature-card">
                     <img src="images/verified-badge.svg" alt="Verified Badge" style="width: 60px; height: 60px; margin-bottom: 1rem;">
                     <h3>CIPC Verification</h3>
                     <p>Instantly verify registration status, directors, and official address. Know exactly who you are dealing with.</p>
                 </div>
                 
-                <!-- Feature 2 -->
                 <div class="feature-card">
                     <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>Payment Behaviour</h3>
                     <p>See how they pay other suppliers. Are they 30 days, 60 days, or "call for collection"? Know before you invoice.</p>
                 </div>
                 
-                <!-- Feature 3 -->
                 <div class="feature-card">
                     <div class="icon-box"><i class="fa-solid fa-bell"></i></div>
                     <h3>Risk Monitoring</h3>
@@ -707,30 +271,30 @@
                 <h2>Frequently Asked Questions</h2>
             </div>
             <div style="display: flex; flex-direction: column; gap: 1.5rem;">
-                <details style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px; cursor: pointer;">
-                    <summary style="font-weight: 700; font-family: 'Outfit', sans-serif; color: var(--primary);">Where does the data come from?</summary>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">We aggregate live data from the CIPC, Department of Justice (for judgments), and multiple credit bureaus to ensure you have the most up-to-date information available.</p>
+                <details>
+                    <summary>Where does the data come from?</summary>
+                    <p>We aggregate live data from the CIPC, Department of Justice (for judgments), and multiple credit bureaus to ensure you have the most up-to-date information available.</p>
                 </details>
-                <details style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px; cursor: pointer;">
-                    <summary style="font-weight: 700; font-family: 'Outfit', sans-serif; color: var(--primary);">Can I integrate this into my ERP?</summary>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">Yes! Our Enterprise plan includes full API access, allowing you to automate credit checks directly within SAP, Sage, or Xero.</p>
+                <details>
+                    <summary>Can I integrate this into my ERP?</summary>
+                    <p>Yes! Our Enterprise plan includes full API access, allowing you to automate credit checks directly within SAP, Sage, or Xero.</p>
                 </details>
-                <details style="padding: 1.5rem; border: 1px solid var(--border); border-radius: 12px; cursor: pointer;">
-                    <summary style="font-weight: 700; font-family: 'Outfit', sans-serif; color: var(--primary);">Is there a contract?</summary>
-                    <p style="margin-top: 1rem; color: var(--text-muted);">No. All our plans are month-to-month. You can upgrade, downgrade, or cancel at any time without penalty.</p>
+                <details>
+                    <summary>Is there a contract?</summary>
+                    <p>No. All our plans are month-to-month. You can upgrade, downgrade, or cancel at any time without penalty.</p>
                 </details>
             </div>
         </div>
     </section>
 
     <!-- Final CTA -->
-    <section class="section" style="background: var(--primary); color: white; text-align: center; padding: 5rem 0;">
+    <section class="final-cta">
         <div class="container">
             <h2 style="color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">Ready to trade with confidence?</h2>
-            <p style="color: rgba(255,255,255,0.8); font-size: 1.25rem; max-width: 600px; margin: 0 auto 2.5rem;">
+            <p>
                 Join over 500 South African businesses who trust CredBuddy for their risk intelligence.
             </p>
-            <div style="display: flex; gap: 1rem; justify-content: center;">
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="#" class="btn" style="background: var(--accent); color: white; border: none;">Get Started Now</a>
                 <a href="#" class="btn" style="background: transparent; border: 1px solid rgba(255,255,255,0.3); color: white;">Contact Sales</a>
             </div>
@@ -747,8 +311,8 @@
                 </div>
                 <div class="footer-col">
                     <h4>Product</h4>
-                    <a href="#">Features</a>
-                    <a href="#">Pricing</a>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
                     <a href="#">API</a>
                 </div>
                 <div class="footer-col">
