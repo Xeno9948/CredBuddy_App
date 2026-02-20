@@ -1052,3 +1052,11 @@ h3 {
         animation: none; /* Simplify on mobile */
     }
 }
+
+/* Footer */
+.footer {
+    background: var(--primary-dark);
+    color: white;
+    padding: 4rem 0 2rem;
+    margin-top: 0;
+}
