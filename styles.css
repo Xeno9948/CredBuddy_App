@@ -164,7 +164,7 @@ h3 {
     top: 1.5rem;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 100;
+    z-index: 9999; /* Boost z-index */
     width: auto;
     max-width: 900px;
 }
@@ -1058,5 +1058,5 @@ h3 {
     background: var(--primary-dark);
     color: white;
     padding: 4rem 0 2rem;
-    margin-top: 0;
+    margin-top: -2px; /* Negative margin to kill white gap */
 }
