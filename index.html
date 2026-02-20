@@ -410,6 +410,67 @@
             .hero-visual { margin-top: 2rem; }
             .stat-float { left: 50%; transform: translateX(-50%); bottom: -20px; width: max-content; }
         }
+
+        /* Video Background & Glass Effect */
+        .video-section {
+            position: relative;
+            overflow: hidden;
+            background: #000; /* Fallback */
+        }
+        
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+            opacity: 0.6; /* Darken video slightly */
+            object-fit: cover;
+        }
+        
+        .video-bg-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.7); /* Blue-ish tint overlay */
+            z-index: 1;
+        }
+        
+        .relative-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 2rem;
+            color: white;
+        }
+        
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7) !important; /* Semi-transparent white */
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.5) !important;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1) !important;
+        }
+        
+        .glass-card h3, .glass-card p, .glass-card i {
+            /* Inherit colors but ensure contrast */
+        }
+        
+        .video-section h2 { color: white; }
+        .video-section p { color: rgba(255, 255, 255, 0.9) !important; }
     </style>
 </head>
 <body>
@@ -495,32 +556,36 @@
     </div>
 
     <!-- Features Section -->
-    <section id="features" class="section">
-        <div class="container">
-            <div class="features-header">
-                <h2>Everything you need to trade safely</h2>
-                <p style="color:var(--text-muted); font-size:1.1rem; margin-top:1rem;">
+    <section id="features" class="section video-section">
+        <div class="video-bg-overlay"></div>
+        <video autoplay muted loop playsinline class="video-bg">
+            <source src="https://cdn.pixabay.com/video/2019/04/23/23011-332483109_large.mp4" type="video/mp4">
+        </video>
+        <div class="container relative-content">
+            <div class="features-header glass-panel" style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
+                <h2 style="color: white;">Everything you need to trade safely</h2>
+                <p style="color: rgba(255,255,255,0.9); font-size:1.1rem; margin-top:1rem;">
                     We aggregate data from CIPC, courts, and payment networks so you get the full picture in seconds.
                 </p>
             </div>
             
             <div class="grid-3">
                 <!-- Feature 1 -->
-                <div class="feature-card">
+                <div class="feature-card glass-card">
                     <img src="images/verified-badge.svg" alt="Verified Badge" style="width: 60px; height: 60px; margin-bottom: 1rem;">
                     <h3>CIPC Verification</h3>
                     <p>Instantly verify registration status, directors, and official address. Know exactly who you are dealing with.</p>
                 </div>
                 
                 <!-- Feature 2 -->
-                <div class="feature-card">
+                <div class="feature-card glass-card">
                     <div class="icon-box"><i class="fa-solid fa-chart-line"></i></div>
                     <h3>Payment Behaviour</h3>
                     <p>See how they pay other suppliers. Are they 30 days, 60 days, or "call for collection"? Know before you invoice.</p>
                 </div>
                 
                 <!-- Feature 3 -->
-                <div class="feature-card">
+                <div class="feature-card glass-card">
                     <div class="icon-box"><i class="fa-solid fa-bell"></i></div>
                     <h3>Risk Monitoring</h3>
                     <p>Turn on alerts for key clients. We'll notify you if a director resigns or a judgment is recorded against them.</p>
