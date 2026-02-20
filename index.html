@@ -74,25 +74,25 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            padding: 0.75rem 1.5rem;
-            border-radius: 8px;
+            padding: 0.6rem 1.25rem;
+            border-radius: 50px; /* Rounder/Pill shape */
             font-weight: 600;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             cursor: pointer;
             transition: transform 0.2s, box-shadow 0.2s;
         }
 
         .btn-primary {
-            background: var(--accent);
+            background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%); /* Force Amber/Gold */
             color: white;
             border: none;
-            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.25);
+            box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
         }
 
         .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.35);
+            background: linear-gradient(135deg, #D97706 0%, #B45309 100%);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 16px rgba(245, 158, 11, 0.4);
         }
         
         .btn-outline {
@@ -116,9 +116,9 @@
 
         /* Header - Pill Shape Floating */
         .header {
-            padding: 0.75rem 0;
+            padding: 0.3rem 0;
             position: fixed;
-            top: 1.5rem;
+            top: 1rem;
             left: 50%;
             transform: translateX(-50%);
             z-index: 9999;
@@ -137,7 +137,7 @@
             border: 1px solid rgba(0, 0, 0, 0.06);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
             border-radius: 100px;
-            padding: 0.5rem 0.75rem 0.5rem 1.5rem;
+            padding: 0.4rem 0.75rem 0.4rem 1.5rem;
         }
 
         .logo {
