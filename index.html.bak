@@ -418,7 +418,7 @@
     <nav class="navbar">
         <div class="container nav-content">
             <a href="#" class="logo">
-                <img src="images/logo.png" alt="CredBuddy Logo" style="height: 40px; margin-right: 0.5rem;">
+                <img src="CredBuddy_transparrant.png" alt="CredBuddy Logo" style="height: 40px; margin-right: 0.5rem;">
                 CredBuddy
             </a>
             <div class="nav-links">
@@ -507,7 +507,7 @@
             <div class="grid-3">
                 <!-- Feature 1 -->
                 <div class="feature-card">
-                    <img src="images/verified-badge.svg" alt="Verified Badge" style="width: 60px; height: 60px; margin-bottom: 1rem;">
+                    <div class="icon-box"><i class="fa-solid fa-building-columns"></i></div>
                     <h3>CIPC Verification</h3>
                     <p>Instantly verify registration status, directors, and official address. Know exactly who you are dealing with.</p>
                 </div>
@@ -534,7 +534,7 @@
         <div class="container">
             <div class="grid-2">
                 <div>
-                    <img src="images/dashboard-preview.svg" alt="CredBuddy Dashboard" style="width:100%; border-radius:16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                    <img src="images/dashboard-preview.jpg" alt="CredBuddy Dashboard" style="width:100%; border-radius:16px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
                 </div>
                 <div>
                     <h2 style="margin-bottom: 1.5rem;">See the full picture. <br><span class="text-gradient">In seconds.</span></h2>
